@@ -1,0 +1,21 @@
+{
+  "routes": [
+    {
+      "routePath": "/go/:platform",
+      "mountPath": "/go",
+      "method": "",
+      "module": [
+        "go/[platform].js:onRequest"
+      ]
+    },
+    {
+      "routePath": "/stats",
+      "mountPath": "/",
+      "method": "",
+      "module": [
+        "stats.js:onRequest"
+      ]
+    }
+  ],
+  "baseURL": "/"
+}

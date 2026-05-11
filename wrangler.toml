@@ -1,0 +1,9 @@
+name = "falling-glitter-25c2"
+
+# Обязательно для Pages проектов
+pages_build_output_dir = "."
+
+# KV для разработки
+[[kv_namespaces]]
+binding = "LINK_TRACKER"
+id = "local-kv"

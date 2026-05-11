@@ -1,0 +1,165 @@
+:root {
+    --bg: #28082b;
+    --text: #f4f4f2;
+    --muted: #94a3b8;
+    --border: rgba(214, 80, 255, 0.15);
+    --shadow: 0 20px 60px rgba(30, 0, 30, 0.5);
+    --glow: 0 0 0 1px rgba(80, 140, 255, 0.12), 0 0 32px rgba(248, 60, 255, 0.2);
+    --radius: 22px;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at top, rgba(231, 10, 213, 0.15), transparent 45%), linear-gradient(180deg, #421047 0%, #28082b 55%, #120416 100%);
+    padding: max(24px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom)) 20px;
+    font-family: 'Inter', sans-serif;
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.page-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 34px 24px 26px;
+    background: linear-gradient(180deg, rgba(214, 80, 255, 0.08), rgba(226, 80, 255, 0.02));
+    border-radius: 28px;
+    border: 1px solid var(--border);
+    box-shadow: var(--glow);
+}
+
+.avatar-img {
+    width: 112px;
+    height: 112px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(229, 80, 255, 0.08)), linear-gradient(180deg, rgba(213, 60, 255, 0.4), rgba(219, 60, 255, 0.1));
+    border-radius: 50%;
+    display: flex;
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin-top: 15px;
+}
+
+.subtitle {
+    margin: 10px 0 26px;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    color: var(--muted);
+    letter-spacing: 0.01em;
+}
+
+.links {
+    display: grid;
+    gap: 12px;
+    width: 100%;
+}
+
+.button:hover {
+    transform: translateY(-2px) scale(1.01);
+    filter: brightness(1.04);
+}
+
+.button-telegram:hover {
+    box-shadow: 0 16px 34px rgba(34, 158, 217, 0.34), 0 0 22px rgba(42, 171, 238, 0.18);
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 58px;
+    padding: 16px 20px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+    will-change: transform;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+}
+
+.button-telegram {
+    color: #ffffff;
+    background: linear-gradient(180deg, #2aabee 0%, #229ed9 100%);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 12px 28px rgba(187, 34, 217, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.button-instagram {
+    color: #ffffff;
+    background: linear-gradient(180deg, #e12aee 0%, #db15b0 100%);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 12px 28px rgba(187, 34, 217, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.button-threads {
+    color: #ffffff;
+    background: linear-gradient(180deg, #343333 0%, #000000 100%);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 12px 28px rgba(187, 34, 217, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.secondary-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.secondary-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.secondary-links a:hover {
+    color: var(--text);
+    transform: translateY(-2px);
+}
+
+footer {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 0.74rem;
+    color: #66686d;
+    letter-spacing: 0.04em;
+}
