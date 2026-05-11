@@ -61,3 +61,4 @@ export async function onRequest({ env }) {
     headers: { 'Content-Type': 'text/html; charset=utf-8' }
   });
 }
+

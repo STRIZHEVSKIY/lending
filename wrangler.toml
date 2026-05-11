@@ -1,0 +1,7 @@
+name = "lending"
+
+pages_build_output_dir = "."
+
+[[kv_namespaces]]
+binding = "LINK_TRACKER"
+id = "local-kv"

@@ -30,3 +30,5 @@ export async function onRequest(context) {
   // редирект
   return Response.redirect(targetUrl, 302);
 }
+
+functions/go/[platform].js
