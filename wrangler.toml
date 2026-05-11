@@ -1,8 +1,0 @@
-name = "landing"
-
-pages_build_output_dir = "."
-
-# KV binding только для локальной разработки
-[[kv_namespaces]]
-binding = "LINK_TRACKER"
-id = "local-kv"
